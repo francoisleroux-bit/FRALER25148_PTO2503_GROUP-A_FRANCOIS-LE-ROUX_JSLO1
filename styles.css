@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #F4F7FD;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  .kanban-app {
+  width: 1440px;
+  height: 1024px;
+  background-color: #F4F7FD;
+  display: flex;
+}
+  /* Sidebar container */
+  .kanban-sidebar {
+    width: 300px;
+    height: 1024px;
+    background-color: #FFFFFF;
+    padding-top: 32.78px;
+    padding-left: 34px;
+  }
+  
+  /* Logo-Light */
+  .logo-light img {
+    width: 152.53px;
+    height: 25.22px;
+    top: 32.78px;
+    left: 34px;
+    display: block;
+    margin-bottom: 34px;
+  }
+  
+  /* ALL BOARDS text */
+  .all-boards {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 2.4px;
+    margin-bottom: 24px;
+    color: #828FA3;
+  }
+  
+  /* Launch Career button */
+  .launch-career-button {
+    width: 276px;
+    height: 48px;
+    top: 48px;
+    left: 32px;
+    background-color: #635FC7;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 24px;
+    margin-left: -58px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  /* Launch Career header bar */
+.launch-career-header {
+    position: absolute;
+    top: 0;
+    left: 301px;
+    width: 1139px;
+    height: 97px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+    border-bottom: 1px solid #E0E0E0;
+  }
+  
+  .launch-career-header h1 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #000000;
+  }
+  .kanban-columns {
+    position: absolute;
+    top: 121px;
+    left: 325px;
+    width: 1139px;
+    height: calc(1024px - 121px);
+    display: flex;
+    gap: 40px;
+  }
+  
+  .kanban-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .todo-column {
+    width: 264px;
+    height: 447px;
+  }
+  .kanban-card {
+    width: 280px;
+    height: 60px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(54, 78, 126, 0.1);
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1;
+    letter-spacing: 0px;
+    color: #000112;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .kanban-column .kanban-card:first-of-type {
+    margin-top: 59px;
+  }
+  .kanban-card:hover {
+  background-color: #F0EFFA;
+  box-shadow: 0px 4px 8px rgba(99, 95, 199, 0.2);
+  cursor: pointer;
+}
+  
+  .doing-column {
+    width: 280px;
+    height: 724px;
+  }
+  
+  .done-column {
+    width: 264px;
+    height: 339px;
+  }
+  
+  /* Column header (dot + title) */
+  .kanban-column-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  
+  /* Colored dots */
+  .kanban-dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+  }
+  
+  .kanban-dot.todo {
+    background-color: #49C4E5;
+  }
+  
+  .kanban-dot.doing {
+    background-color: #8471F2;
+  }
+  
+  .kanban-dot.done {
+    background-color: #67E2AE;
+  }
+  
+  /* Column title styling */
+  .kanban-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 2.4px;
+    color: #828FA3;
+    height: 15px;
+  }
+  @media (max-width: 420px) {
+    .kanban-app {
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+    }
+  
+    /* Sidebar stacks on top */
+    .kanban-sidebar {
+      width: 100%;
+      height: auto;
+      padding-left: 16px;
+      padding-right: 16px;
+      margin-bottom: 16px;
+    }
+  
+    /* Logo centers on mobile */
+    .logo-light img {
+      margin: 0 auto 16px auto;
+    }
+  
+    .all-boards {
+      text-align: center;
+      margin-bottom: 8px;
+    }
+  
+    .launch-career-button {
+      width: 100%;
+      margin-left: 0;
+      border-radius: 8px;
+      margin-top: 16px;
+      padding-left: 0;
+    }
+  
+    /* Header stacks */
+    .kanban-main {
+      position: static;
+      width: 100%;
+    }
+  
+    .launch-career-header {
+      position: static;
+      width: 100%;
+      height: auto;
+      padding: 16px;
+      text-align: center;
+    }
+  
+    .launch-career-header h1 {
+      font-size: 18px;
+    }
+  
+    /* Columns become single column stack */
+    .kanban-columns {
+      position: static;
+      width: 100%;
+      height: auto;
+      flex-direction: column;
+      gap: 24px;
+      padding: 16px;
+    }
+  
+    .kanban-column {
+      width: 100%;
+    }
+  
+    .kanban-card {
+      width: 100%;
+      margin-bottom: 24px;
+    }
+  
+    .kanban-column .kanban-card:first-of-type {
+      margin-top: 24px;
+    }
+  
+    .kanban-column-header {
+      justify-content: center;
+    }
+  }
+  
+  
