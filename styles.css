@@ -235,7 +235,7 @@
       width: 100%;
       height: auto;
       flex-direction: column;
-      gap: 24px;
+      gap: 10px;
       padding: 16px;
     }
   
@@ -256,5 +256,188 @@
       justify-content: center;
     }
   }
+  /* === MODAL STYLES === */
+  .modal-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1;
+    margin-bottom: 20px;
+    color: #000112;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  
+  .modal-overlay.hidden {
+    display: none;
+  }
+  
+  .task-box {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 24px;
+    position: relative;
+    width: 480px;
+    max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .modal-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1;
+    color: #000112;
+    margin-bottom: 8px;
+  }
+  
+  .task-box label {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 23px;
+    color: #828FA3;
+  }
+  
+  .task-box input,
+  .task-box textarea,
+  .task-box select {
+    width: 424px;
+    padding: 10px 14px;
+    font-size: 14px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    resize: none;
+  }
+  
+  .create-task-btn {
+    width: 424px;
+    height: 40px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    background-color: #635FC7;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: center;
+  }
+  
+  .create-task-btn:hover {
+    background-color: #4e4ab6;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #EA5555;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    padding: 0;
+    line-height: 1;
+  }
+  
+  /* === Mobile Responsiveness === */
+  @media (max-width: 420px) {
+    .kanban-app {
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      overflow-x: hidden;
+    }
+  
+    .kanban-sidebar {
+      width: 100%;
+      height: auto;
+      padding: 16px;
+      margin-bottom: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff;
+    }
+  
+    /* Hide unnecessary text on mobile */
+    .all-boards,
+    .launch-career-button,
+    .launch-career-header {
+      display: none;
+    }
+  
+    .kanban-columns {
+      width: 100%;
+      height: auto;
+      flex-direction: column;
+      gap: 12px;
+      padding: 0 12px 16px 12px;
+    }
+  
+    .kanban-column {
+      width: 100%;
+      gap: 8px;
+    }
+  
+    .kanban-card {
+      width: 100%;
+      margin-bottom: 12px;
+      padding: 14px 16px;
+    }
+  
+    .kanban-column .kanban-card:first-of-type {
+      margin-top: 4px;
+    }
+  
+    .kanban-column-header {
+      justify-content: flex-start;
+      margin-bottom: 4px;
+    }
+  
+    /* Modal: scale to mobile */
+    .modal-overlay {
+      align-items: flex-start;
+      padding: 16px;
+    }
+  
+    .task-box {
+      width: 100%;
+      max-width: 100%;
+      margin-top: 80px;
+      padding: 16px;
+    }
+  
+    .create-task-btn {
+      width: 100%;
+    }
+  
+    .close-btn {
+      top: 12px;
+      right: 12px;
+    }
+  }
+  
   
   
